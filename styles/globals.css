@@ -1,0 +1,56 @@
+@import url("./fonts.css");
+@import url('./stripe.css');
+@layer tailwind-base, primereact, tailwind-utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Helvetica, sans-serif;
+}
+
+.HeroSection_parent {
+  background: url("/images/Narenj_Hero1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @apply flex flex-col items-center justify-center lg:bg-fixed;
+}
+
+.bluryBack {
+  backdrop-filter: blur(10px) saturate(380%);
+  -webkit-backdrop-filter: blur(10px) saturate(380%);
+  background-color: rgba(43, 43, 43, 0.7);
+  border-radius: 50px 50px 0 0;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  border-bottom: none;
+  @apply mt-auto lg:mt-0 lg:w-1/2 flex flex-col items-center justify-start gap-4 p-10 h-2/3 lg:ml-10;
+}
+
+.primaryBtn {
+  @apply px-6 py-3 font-bold uppercase transition-all border-2 cursor-pointer text-white border-primary-400 hover:bg-primary-400 hover:text-white;
+}
+
+.reservation {
+  background: url("/images/Narenj-view.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @apply flex flex-col items-center justify-center w-full lg:bg-fixed h-screen lg:items-center lg:justify-center;
+}
+
+.foodmenu {
+  background-repeat: repeat;
+  background-size: cover;
+}
